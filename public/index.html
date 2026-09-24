@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ZyraPlus Lua Lab</title><link rel="stylesheet" href="/styles.css"></head>
+<body><main><header><div><p class="eyebrow">LUA / LUAU TOOLCHAIN</p><h1>ZyraPlus</h1><p class="muted">Transform source and inspect bounded VM bytecode locally.</p></div><span class="badge">SAFE MODE</span></header>
+<section class="toolbar"><label class="upload">Open .lua<input id="file" type="file" accept=".lua,.luau,text/plain"></label><button id="transform">Transform</button><button id="compile">Compile VM</button><button id="run" class="accent">Run VM</button><button id="download">Download</button></section>
+<section class="grid"><div class="panel"><div class="panel-title">Input source</div><textarea id="input" spellcheck="false">local greeting = "Hello from ZyraPlus"
+local answer = 6 * 7
+return greeting .. " — " .. answer</textarea></div><div class="panel"><div class="panel-title">Transformed output</div><textarea id="output" spellcheck="false" readonly></textarea></div></section>
+<section class="bottom"><div class="panel"><div class="panel-title">VM console</div><pre id="console">VM idle. Compile a supported subset to inspect bytecode.</pre></div><div class="panel info"><div class="panel-title">Boundaries</div><p>VM mode supports literals, local assignments, arithmetic, comparisons, concatenation, and return. Globals, calls, loops, tables, I/O, networking, and executor-specific APIs are rejected.</p></div></section></main><script type="module" src="/app.js"></script></body></html>
